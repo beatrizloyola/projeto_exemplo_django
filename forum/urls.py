@@ -1,9 +1,11 @@
 from django.urls import path
+from django.urls import include
 
 from . import views
 
 app_name = 'forum'
 urlpatterns = [
+    path('forum/', include('forum.urls')),
     # ex: /forum/
     path("", views.MainView.as_view(), name="index"),
     # ex: /forum/5/

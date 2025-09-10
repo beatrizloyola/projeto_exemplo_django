@@ -56,7 +56,7 @@ class InserirPerguntaView(View):
         data_criacao = timezone.now()
         
         pergunta = Pergunta(titulo=titulo, detalhe=detalhe, 
-        tentativa=tentativa, data_criacao=data_criacao, usuario=usuario)
+tentativa=tentativa, 	data_criacao=data_criacao, usuario=usuario)
         pergunta.save()
 
         return redirect(reverse('forum:detalhe', args=[pergunta.id]))
@@ -86,4 +86,3 @@ class InserirRespostaView(View):
         pergunta.resposta_set.create(texto=texto, data_criacao=data_criacao, usuario=usuario)
 
         return redirect(reverse('forum:detalhe', args=[pergunta.id]))
-
