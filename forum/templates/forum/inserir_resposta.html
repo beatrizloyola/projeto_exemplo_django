@@ -1,0 +1,26 @@
+{% extends "forum/detalhe.html" %}
+
+{% block respostas %}
+<h3>Adicionar resposta</h3>
+<form method="post">
+    {% csrf_token %}
+    # Veja que estamos reusando o template "detalhe.html" e sobrescrevendo apenas o bloco "respostas" substituindo as respostas por um formulário que recebe uma resposta.
+
+
+{% extends "forum/detalhe.html" %}
+
+{% block respostas %}
+<h3>Adicionar resposta</h3>
+<form method="post">
+    {% csrf_token %}
+    
+        <textarea rows="6" cols="50" id="texto" name="texto"></textarea>
+    <p>
+    <input type="submit" value="Salvar">
+</form>
+{% endblock %}
+        <textarea rows="6" cols="50" id="texto" name="texto"></textarea>
+    <p>
+    <input type="submit" value="Salvar">
+</form>
+{% endblock %}
